@@ -1,81 +1,68 @@
 extends ../modules/head
 block title
-	| Nёrds - главная
+	| Barbershop - главная
 block main
 	include ../modules/header
 	main.page
-		h1.visually-hidden Содание сайтов под ключ
+		h1.visual-hiden Барбершоп Бородинский
 		section.offers
-			.offers__list
-				.offers__items
-					img.offers__img(src=require('../../assets/images/illustration-1-jpg.jpg'), width="300" height="146"
-					alt="offers-img__website")
-					h3.offers__title Веб-сайты
-					p.offers__description Мир никогда не будет прежним после того как увидит ваш сайт!
-					a.offers__button--red(class='button' href='#') заказать
-				.offers__items
-					img.offers__img(src=require('../../assets/images/illustration-2-jpg.jpg'), width="300" height="146"
-					alt="offers-img__website")
-					h3.offers__title Приложения
-					p.offers__description Покорите топ-10 приложений в AppStore и Google Play
-					a.offers__button--green(class='button' href='#') заказать
-				.offers__items
-					img.offers__img(src=require('../../assets/images/illustration-3-jpg.jpg'), width="300" height="146"
-					alt="offers-img__website")
-					h3.offers__title Презентации
-					p.offers__description Вы даже не подозреваете, насколько вы изумительны!
-					a.offers__button--yellow(class='button'  href='#') заказать
-		hr.line
-		section.studio
-			.studio__wrapper
-				.studio__wrapper__studio
-					p.studio__title Мы — маленькая, но гордая дизайн-студия из Краснодара.
-					p.studio__description Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
-					b.studio__list-title Выполняем заказы на разработку:
-					ul.studio__list
-						li.studio__item Веб-сайтов любой сложности
-						li.studio__item Мобильных приложений для iOS и Android
-						li.studio__item Слайдшоу и видео для корпоративных презентаций
-				.container
-					img.studio__logo(src=require('../../assets/images/nerds-illustration-jpg.jpg'), width="360" height="208"
-					alt="ilustration__logo")
-					b.studio__title--right с 2004 года Любим точность во всем:
-					table.studio__table
-						tr
-							th 146
-								span %
-							th 100
-								span %
-							th 50
-								span %
-						tr
-							td Уровень самоотдачи
-							td Соблюдение сроков
-							td Минимальная предоплата
-			hr.line
-		section.customers
-			.customers__wrap
-				ul.customers__list
-					li.customers__item
-						a.custumer__link(href='#')
-							img.customers__img(src=require('../../assets/images/logo-1.png'), width="199" height="68"
-						alt="html-academy")
-					li.customers__item
-						a.custumer__link(href='#')
-							img.customers__img(src=require('../../assets/images/logo-2.png'), width="209" height="90"
-							alt="Borodinski")
-					li.customers__item
-						a.custumer__link(href='#')
-							img.customers__img(src=require('../../assets/images/logo-3.png'), width="185" height="52"
-							alt="pink")
-					li.customers__item
-						a.custumer__link(href='#')
-							img.customers__img(src=require('../../assets/images/logo-4.png'), width="173" height="84"
-							alt="mishka")
-				hr.line
+			.offers__wrapper
+				.offers__container
+					h3.offers__title быстро
+					p.offers__description МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
+				.offers__container
+					h3.offers__title круто
+					p.offers__description ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
+				.offers__container
+					h3.offers__title дорого
+					p.offers__description НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?
+		section.advantages
+			h2.visual-hiden Преимущества
+			.advantages__wrapper
+				.advantages__container
+					h3.advantages__title Новости
+					p.advantages__description НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+					span.advantages__date 11 января
+					p.advantages__description НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+					span.advantages__date 11 января
+					a.advantages__all-news(href='#' type='button')
+					hr
+				.advantages__container
+					h3.advantages__title Фотогалерея
+					img.advantages__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="galery")
+					.advantages__container--button
+						button.advantages__button(type='button', name='backward') Назад
+						button.advantages__button(type='button', name='forward') Вперед
 		section.contacts
-			.contacts__wrap
-
+			.contacts__wrapper
+				.contacts__container
+					h3.contacts__title КОНТАКТНАЯ ИНФОРМАЦИЯ
+					p.contacts__addresses БАРБЕРШОП «БОРОДИНСКИЙ»
+					br
+					| АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8
+					a.contacts__phone(href="tel:+74956660266") ТЕЛЕФОН: +7 (495) 666-02-66
+					span.contacts__time ВРЕМЯ РАБОТЫ:
+					br
+					| ПН—ПТ: С 10:00 ДО 22:00
+					br
+					| СБ—ВС: С 10:00 ДО 19:00
+					.contacts-container__button
+						a.contacts__href(href='#' type='button') КАК ПРОЕХАТЬ
+						a.contacts__href(href='#' type='button') ОБРАТНАЯ СВЯЗЬ
+						hr
+				.contacts__container
+					h3.contacts__title ЗАПИСАТЬСЯ
+					p.contacts__addresses УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
+					form.contacts__enroll(type="post" id='contacts__form' action='/echo')
+						label(for='date') Дата
+						input#data(type='date', name='date', required='', value='08.10.2017')
+						label(for='time') время
+						input#time(type='time', name='time', required='', value='10:00')
+						label(for='name') Ваше имя
+						input#name(type='text', name='name', required='', value='Борода')
+						label(for='telephone') Телефон
+						input#thelephone(type='tel', name='tel', required='', value='+7 123 456-78-90')
+						input#submit(type='submit', name='button' value='ОТПРАВИТЬ')
 	include ../modules/footer
 
 
