@@ -1,0 +1,82 @@
+extends ../modules/head
+block title
+	| Nёrds - главная
+block main
+	include ../modules/header
+	main.page
+		h1.visually-hidden Содание сайтов под ключ
+		section.offers
+			.offers__list
+				.offers__items
+					img.offers__img(src=require('../../assets/images/illustration-1-jpg.jpg'), width="300" height="146"
+					alt="offers-img__website")
+					h3.offers__title Веб-сайты
+					p.offers__description Мир никогда не будет прежним после того как увидит ваш сайт!
+					a.offers__button--red(class='button' href='#') заказать
+				.offers__items
+					img.offers__img(src=require('../../assets/images/illustration-2-jpg.jpg'), width="300" height="146"
+					alt="offers-img__website")
+					h3.offers__title Приложения
+					p.offers__description Покорите топ-10 приложений в AppStore и Google Play
+					a.offers__button--green(class='button' href='#') заказать
+				.offers__items
+					img.offers__img(src=require('../../assets/images/illustration-3-jpg.jpg'), width="300" height="146"
+					alt="offers-img__website")
+					h3.offers__title Презентации
+					p.offers__description Вы даже не подозреваете, насколько вы изумительны!
+					a.offers__button--yellow(class='button'  href='#') заказать
+		hr.line
+		section.studio
+			.studio__wrapper
+				.studio__wrapper__studio
+					p.studio__title Мы — маленькая, но гордая дизайн-студия из Краснодара.
+					p.studio__description Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+					b.studio__list-title Выполняем заказы на разработку:
+					ul.studio__list
+						li.studio__item Веб-сайтов любой сложности
+						li.studio__item Мобильных приложений для iOS и Android
+						li.studio__item Слайдшоу и видео для корпоративных презентаций
+				.container
+					img.studio__logo(src=require('../../assets/images/nerds-illustration-jpg.jpg'), width="360" height="208"
+					alt="ilustration__logo")
+					b.studio__title--right с 2004 года Любим точность во всем:
+					table.studio__table
+						tr
+							th 146
+								span %
+							th 100
+								span %
+							th 50
+								span %
+						tr
+							td Уровень самоотдачи
+							td Соблюдение сроков
+							td Минимальная предоплата
+			hr.line
+		section.customers
+			.customers__wrap
+				ul.customers__list
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-1.png'), width="199" height="68"
+						alt="html-academy")
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-2.png'), width="209" height="90"
+							alt="Borodinski")
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-3.png'), width="185" height="52"
+							alt="pink")
+					li.customers__item
+						a.custumer__link(href='#')
+							img.customers__img(src=require('../../assets/images/logo-4.png'), width="173" height="84"
+							alt="mishka")
+				hr.line
+		section.contacts
+			.contacts__wrap
+
+	include ../modules/footer
+
+
+
