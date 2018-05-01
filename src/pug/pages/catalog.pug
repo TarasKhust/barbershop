@@ -1,0 +1,69 @@
+extends ../modules/head
+block title
+	| Каталог
+block main
+	header.catalog-header
+		.main-header__wrapper
+			a.catalog__logo(href='#')
+				img(src=require('../../assets/images/catalog-logo.png'), width="111" alt="catalog__logo")
+			include ../modules/menu
+	main.page-catalog
+		h1.page-catalog__title СРЕДСТВА ДЛЯ УХОДА
+		ul.page-catalog__list
+			li.page-catalog__item
+				a.page-catalog__link(href='#') Главная
+			li.page-catalog__item
+				a.page-catalog__link(href='#') Магазин
+			li.page-catalog__item
+				a.page-catalog__link(href='#') Средства для Ухода
+		include ../modules/filter
+		section.product
+			h2.visually-hidden Товары
+			.product__thumb
+				a.product__link(href='#')
+					img.product__img(src=require('../../assets/images/catalog/layer-38.png'), width="220" height="165" alt="product")
+				h3.product__title
+					a(href='#') Набор для путешествий «Baxter of California»
+				span.product__price 2 900 ₽
+				button.button.button__price(type='button') Купить
+			.product__thumb
+				a.product__link(href='#')
+					img.product__img(src=require('../../assets/images/catalog/layer-30.png'), width="220" height="165" alt="product")
+				h3.product__title
+					a(href='#') Увлажняющий кондиционер «Baxter of California»
+				span.product__price 750 ₽
+				button.button.button__price(type='button') Купить
+			.product__thumb
+				a.product__link(href='#')
+					img.product__img(src=require('../../assets/images/catalog/layer-39.png'), width="220" height="165" alt="product")
+				h3.product__title
+					a(href='#') Гель для волос «SUAVECITO»
+				span.product__price 290 ₽
+				button.button.button__price(type='button') Купить
+			.product__thumb
+				a.product__link(href='#')
+					img.product__img(src=require('../../assets/images/catalog/layer-32.png'), width="220" height="165" alt="product")
+				h3.product__title
+					a(href='#') Глина для укладки волос «American crew»
+				span.product__price 500 ₽
+				button.button.button__price(type='button') Купить
+			.product__thumb
+				a.product__link(href='#')
+					img.product__img(src=require('../../assets/images/catalog/layer-33.png'), width="220" height="165" alt="product")
+				h3.product__title
+					a(href='#') Гель для волос «AMERICAN CREW»
+				span.product__price 300 ₽
+				button.button.button__price(type='button') Купить
+			.product__thumb
+				a.product__link(href='#')
+					img.product__img(src=require('../../assets/images/catalog/layer-42.png'), width="220" height="165" alt="product")
+				h3.product__title
+					a(href='#') Набор для бритья «Baxter of California»
+				span.product__price 3 900 ₽
+				button.button.button__price(type='button') Купить
+				.product__paginathion--button
+					button.button.product__paginathion(type='button') 1
+					button.button.product__paginathion(type='button') 2
+					button.button.product__paginathion(type='button') 3
+					button.button.product__paginathion(type='button') 4
+	include ../modules/footer

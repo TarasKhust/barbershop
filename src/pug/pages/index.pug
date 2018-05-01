@@ -3,6 +3,7 @@ block title
 	| Barbershop - главная
 block main
 	include ../modules/header
+	include ../modules/menu
 	main.page
 		h1.visually-hidden Барбершоп Бородинский
 		section.offers
@@ -31,7 +32,7 @@ block main
 			h2 Фотогалерея
 			figure.gallery__content
 				a.gallery__link( href='#')
-					img.gallery__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="galery")
+					img.gallery__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="gallery")
 				span.button.gallery__button.gallery__button--back Назад
 				span.button.gallery__button.gallery__button--next Вперед
 		section.contacts
@@ -50,14 +51,14 @@ block main
 		section.appointment
 			h2 ЗАПИСАТЬСЯ
 			p.appointment__addresses УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
-			form.contacts__enroll(type="post" id='contacts__form' action='/echo')
+			form.contacts__enroll#contacts__form(method="post", action='/echo')
 				label(for='date') Дата
 				input#data(type='date', name='date', required='', value='', placeholder='08.10.2017')
 				label(for='time') время
 				input#time(type='time', name='time', required='', value='', placeholder='10:00')
 				label(for='name') Ваше имя
 				input#name(type='text', name='name', required='', value='', placeholder='Борода')
-				label(for='telephone') Телефон
+				label(for='phone') Телефон
 				input#thelephone(type='tel', name='tel', required='', value='', placeholder='+7 123 456-78-90')
 				input#submit(type='submit', name='button' value='ОТПРАВИТЬ')
 	include ../modules/footer

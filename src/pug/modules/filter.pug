@@ -1,0 +1,25 @@
+article.page-catalog__filter
+	section.page-catalog__manufacturers
+		h2.visually-hidden Производители:
+		form.form__filter(method='get' action='/echo')
+			legend.form__title Производители:
+			input.form__option(type='checkbox' name='name')
+			| Baxter of California
+			input.form__option(type='checkbox' name='name')
+			| Mr Natty
+			input.form__option(type='checkbox' name='name')
+			| Suavecito
+			input.form__option(type='checkbox' name='name')
+			| Malin+Goetz
+			input.form__option(type='checkbox' name='name')
+			| Murray’s
+			input.form__option(type='checkbox' name='name')
+			| American Crew
+			legend.form__title ГРУППЫ ТОВАРОВ:
+			input.form__option(type='radio' name='name')
+			| Бритвенные принадлежности
+			input.form__option(type='radio' name='name')
+			| средства для ухода
+			input.form__option(type='radio' name='name')
+			| аксессуары
+			input.button.form__button#button(type='submit' name='button' value='ПОКАЗАТЬ')

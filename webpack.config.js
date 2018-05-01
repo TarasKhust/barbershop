@@ -105,15 +105,15 @@ let conf = {
             // },
         }),
 
-        // new HtmlWebpackPlugin({
-        //     title: 'Photo',
-        //     template: './src/pug/pages/photo.pug',
-        //     hash: true,
-        //     filename: 'photo.html',
-        //     // chunks: ['contact'],
-        //     // minify: {
-        //     //     collapseWhitespace: true },
-        // }),
+        new HtmlWebpackPlugin({
+            title: 'Catalog',
+            template: './src/pug/pages/catalog.pug',
+            hash: true,
+            filename: 'catalog.html',
+            // chunks: ['contact'],
+            // minify: {
+            //     collapseWhitespace: true },
+        }),
         //
         // new HtmlWebpackPlugin({
         //     title: 'Form',
