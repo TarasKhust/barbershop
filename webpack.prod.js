@@ -128,6 +128,9 @@ let conf = {
             },
         ]
     },
+    node: {
+        console: true
+    },
 
     plugins: [
         new HtmlWebpackPlugin({

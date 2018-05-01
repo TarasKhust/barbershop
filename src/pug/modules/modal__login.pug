@@ -1,0 +1,11 @@
+section.modal.modal__login
+	h2 Личный Кабинет
+	p.login__title ВВедите пожалуйста свой логин и пароль
+	form.login__form(action='/echo', method='post')
+		input#name(type='text', name='login', required='', placeholder='ЛОГИН', src=require('../../assets/images/icons/user.png'))
+		input#password(type='password', name='password', required='', placeholder='ПАРОЛЬ', src=require('../../assets/images/icons/lock.png'))
+		input#remember(type='checkbox', name='remember', checked='') ЗАПОМНИТЕ МЕНЯ
+		a.forget(href='#') Я ЗАБЫЛ ПАРОЛЬ!
+		input(type='submit', value='ВОЙТИ')
+		span.modal__close x
+

@@ -4,66 +4,65 @@ block title
 block main
 	include ../modules/header
 	main.page
-		h1.visual-hiden Барбершоп Бородинский
+		h1.visually-hidden Барбершоп Бородинский
 		section.offers
-			.offers__wrapper
-				.offers__container
+			h2.visual-hiden Преимущества
+			ul.offers__list
+				li.offers__item
 					h3.offers__title быстро
 					p.offers__description МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ СТРИЖКИ-МИНУТКИ!
-				.offers__container
+				li.offers__item
 					h3.offers__title круто
 					p.offers__description ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
-				.offers__container
+				li.offers__item
 					h3.offers__title дорого
 					p.offers__description НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ ОПРЕДЕЛЕНЫЙ СТАТУС?
-		section.advantages
-			h2.visual-hiden Преимущества
-			.advantages__wrapper
-				.advantages__container
-					h3.advantages__title Новости
-					p.advantages__description НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
-					span.advantages__date 11 января
-					p.advantages__description НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
-					span.advantages__date 11 января
-					a.advantages__all-news(href='#' type='button')
-					hr
-				.advantages__container
-					h3.advantages__title Фотогалерея
-					img.advantages__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="galery")
-					.advantages__container--button
-						button.advantages__button(type='button', name='backward') Назад
-						button.advantages__button(type='button', name='forward') Вперед
+		section.news
+			h2 Новости
+			ul.news__list
+				li.news__item
+					p.news__description НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+					time.news__date(datetime="2016-01-11") 11 января
+				li.news__item
+					p.news__description НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
+					time.news__date(datetime='2016-01-18') 18 января
+				a.news__button(href='#' type='button') ВСЕ НОВОСТИ
+		section.gallery
+			h2 Фотогалерея
+			figure.gallery__content
+				a.gallery__link( href='#')
+					img.gallery__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="galery")
+				span.button.gallery__button.gallery__button--back Назад
+				span.button.gallery__button.gallery__button--next Вперед
 		section.contacts
-			.contacts__wrapper
-				.contacts__container
-					h3.contacts__title КОНТАКТНАЯ ИНФОРМАЦИЯ
-					p.contacts__addresses БАРБЕРШОП «БОРОДИНСКИЙ»
-					br
-					| АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8
-					a.contacts__phone(href="tel:+74956660266") ТЕЛЕФОН: +7 (495) 666-02-66
-					span.contacts__time ВРЕМЯ РАБОТЫ:
-					br
-					| ПН—ПТ: С 10:00 ДО 22:00
-					br
-					| СБ—ВС: С 10:00 ДО 19:00
-					.contacts-container__button
-						a.contacts__href(href='#' type='button') КАК ПРОЕХАТЬ
-						a.contacts__href(href='#' type='button') ОБРАТНАЯ СВЯЗЬ
-						hr
-				.contacts__container
-					h3.contacts__title ЗАПИСАТЬСЯ
-					p.contacts__addresses УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
-					form.contacts__enroll(type="post" id='contacts__form' action='/echo')
-						label(for='date') Дата
-						input#data(type='date', name='date', required='', value='08.10.2017')
-						label(for='time') время
-						input#time(type='time', name='time', required='', value='10:00')
-						label(for='name') Ваше имя
-						input#name(type='text', name='name', required='', value='Борода')
-						label(for='telephone') Телефон
-						input#thelephone(type='tel', name='tel', required='', value='+7 123 456-78-90')
-						input#submit(type='submit', name='button' value='ОТПРАВИТЬ')
+			h2 КОНТАКТНАЯ ИНФОРМАЦИЯ
+			p.contacts__addresses БАРБЕРШОП «БОРОДИНСКИЙ»
+			br
+			| АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8
+			a.contacts__phone(href="tel:+74956660266") ТЕЛЕФОН: +7 (495) 666-02-66
+			p.contacts__time ВРЕМЯ РАБОТЫ:
+			br
+			| ПН—ПТ: С 10:00 ДО 22:00
+			br
+			| СБ—ВС: С 10:00 ДО 19:00
+			a.button.contacts__button(href='#' type='button') КАК ПРОЕХАТЬ
+			a.button.contacts__button(href='#' type='button') ОБРАТНАЯ СВЯЗЬ
+		section.appointment
+			h2 ЗАПИСАТЬСЯ
+			p.appointment__addresses УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
+			form.contacts__enroll(type="post" id='contacts__form' action='/echo')
+				label(for='date') Дата
+				input#data(type='date', name='date', required='', value='', placeholder='08.10.2017')
+				label(for='time') время
+				input#time(type='time', name='time', required='', value='', placeholder='10:00')
+				label(for='name') Ваше имя
+				input#name(type='text', name='name', required='', value='', placeholder='Борода')
+				label(for='telephone') Телефон
+				input#thelephone(type='tel', name='tel', required='', value='', placeholder='+7 123 456-78-90')
+				input#submit(type='submit', name='button' value='ОТПРАВИТЬ')
 	include ../modules/footer
+	include ../modules/modal__login
+	include ../modules/moda__map
 
 
 
