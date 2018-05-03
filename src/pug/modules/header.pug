@@ -1,7 +1,20 @@
 header.main-header
-	.main-header__wrapper
-		a.main-header__logo(href='index.html')
+	nav.main-nav
+		a.main-header__logo
 			img.logo(src=require('../../assets/images/index-logo.png'), width="371" alt="logo")
+		ul.main-nav__list
+			li.main-nav__item
+				a(href='#contacts') Информация
+			li.main-nav__item
+				a(href='#') новости
+			li.main-nav__item
+				a(href='#') прайс-лсит
+			li.main-nav__item
+				a(href='/catalog.html') магазин
+			li.main-nav__item
+				a(href='#') контакты
+		ul.main-nav__entrance
+			li.login__link(href='#') Вход
 
 
 

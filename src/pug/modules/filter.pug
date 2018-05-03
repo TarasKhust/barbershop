@@ -1,25 +1,37 @@
-article.page-catalog__filter
-	section.page-catalog__manufacturers
-		h2.visually-hidden Производители:
-		form.form__filter(method='get' action='/echo')
-			legend.form__title Производители:
-			input.form__option(type='checkbox' name='name')
-			| Baxter of California
-			input.form__option(type='checkbox' name='name')
-			| Mr Natty
-			input.form__option(type='checkbox' name='name')
-			| Suavecito
-			input.form__option(type='checkbox' name='name')
-			| Malin+Goetz
-			input.form__option(type='checkbox' name='name')
-			| Murray’s
-			input.form__option(type='checkbox' name='name')
-			| American Crew
-			legend.form__title ГРУППЫ ТОВАРОВ:
-			input.form__option(type='radio' name='name')
-			| Бритвенные принадлежности
-			input.form__option(type='radio' name='name')
-			| средства для ухода
-			input.form__option(type='radio' name='name')
-			| аксессуары
-			input.button.form__button#button(type='submit' name='button' value='ПОКАЗАТЬ')
+section.filters
+	h2.visually-hidden Фильтр товаров
+	form.filter(method='get' action='/echo.htmlacademy.ru')
+		fieldset
+			legend.filter__title Производители:
+			ul
+				li.filter__option
+					input.visually-hiden.filter__option.filter__input--chekbox(type='checkbox' name='Baxter of California' checked)
+					| Baxter of California
+				li.filter-option
+					input.visually-hiden.filter__option.filter__input--chekbox(type='checkbox' name='Mr Natty')
+					| Mr Natty
+				li.filter-option
+					input.visually-hiden.filter__option.filter__input--chekbox(type='checkbox' name='Suavecito' checked)
+					| Suavecito
+				li.filter-option
+					input.visually-hiden.filter__option.filter__input--chekbox(type='checkbox' name='Malin+Goetz')
+					| Malin+Goetz
+				li.filter-option
+					input.visually-hiden.filter__option.filter__input--chekbox(type='checkbox' name='Murray’s')
+					| Murray’s
+				li.filter-option
+					input.visually-hiden.filter__option.filter__input--chekbox(type='checkbox' name='American Crew' checked)
+					| American Crew
+		fieldset
+			legend.filter__title ГРУППЫ ТОВАРОВ:
+				ul
+					li.filter-option
+						input.visually-hiden.filter__option.filter__input--radio(type='radio' name='product-group' value='shaving')
+						| Бритвенные принадлежности
+					li.filter-option
+						input.visually-hiden.filter__option.filter__input--radio(type='radio' name='product-group' value='hair-care' checked)
+						| Средства для ухода
+					li.filter-option
+						input.visually-hiden.filter__option.filter__input--radio(type='radio' name='product-group' value='accessories')
+						| Аксессуары
+			input.button.filter__button#button(type='submit' name='button' value='ПОКАЗАТЬ')

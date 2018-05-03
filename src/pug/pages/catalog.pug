@@ -2,68 +2,109 @@ extends ../modules/head
 block title
 	| Каталог
 block main
-	header.catalog-header
-		.main-header__wrapper
-			a.catalog__logo(href='#')
-				img(src=require('../../assets/images/catalog-logo.png'), width="111" alt="catalog__logo")
-			include ../modules/menu
+	header.main-header
+		nav.main-nav
+			a.main-header__logo(href='index.html')
+				img.logo(src=require('../../assets/images/catalog-logo.png'), width="111" alt="logo")
+			ul.main-nav__list
+				li.main-nav__item
+					a(href='#contacts') Информация
+				li.main-nav__item
+					a(href='#') новости
+				li.main-nav__item
+					a(href='#') прайс-лсит
+				li.main-nav__item--current
+					a(href='/catalog.html') магазин
+				li.main-nav__item
+					a(href='#') контакты
+			ul.main-nav__entrance
+				li.login__link(href='#') Вход
 	main.page-catalog
 		h1.page-catalog__title СРЕДСТВА ДЛЯ УХОДА
-		ul.page-catalog__list
-			li.page-catalog__item
-				a.page-catalog__link(href='#') Главная
-			li.page-catalog__item
-				a.page-catalog__link(href='#') Магазин
-			li.page-catalog__item
-				a.page-catalog__link(href='#') Средства для Ухода
+		ul.breadcrumbs__list
+			li.breadcrumbs__item
+				a.breadcrumbs__link(href='index.html') Главная
+			li.breadcrumbs__list
+				a.breadcrumbs__link(href='catalog.html') Магазин
+			li.breadcrumbs__item--current
 		include ../modules/filter
-		section.product
-			h2.visually-hidden Товары
-			.product__thumb
-				a.product__link(href='#')
-					img.product__img(src=require('../../assets/images/catalog/layer-38.png'), width="220" height="165" alt="product")
-				h3.product__title
-					a(href='#') Набор для путешествий «Baxter of California»
-				span.product__price 2 900 ₽
-				button.button.button__price(type='button') Купить
-			.product__thumb
-				a.product__link(href='#')
-					img.product__img(src=require('../../assets/images/catalog/layer-30.png'), width="220" height="165" alt="product")
-				h3.product__title
-					a(href='#') Увлажняющий кондиционер «Baxter of California»
-				span.product__price 750 ₽
-				button.button.button__price(type='button') Купить
-			.product__thumb
-				a.product__link(href='#')
-					img.product__img(src=require('../../assets/images/catalog/layer-39.png'), width="220" height="165" alt="product")
-				h3.product__title
-					a(href='#') Гель для волос «SUAVECITO»
-				span.product__price 290 ₽
-				button.button.button__price(type='button') Купить
-			.product__thumb
-				a.product__link(href='#')
-					img.product__img(src=require('../../assets/images/catalog/layer-32.png'), width="220" height="165" alt="product")
-				h3.product__title
-					a(href='#') Глина для укладки волос «American crew»
-				span.product__price 500 ₽
-				button.button.button__price(type='button') Купить
-			.product__thumb
-				a.product__link(href='#')
-					img.product__img(src=require('../../assets/images/catalog/layer-33.png'), width="220" height="165" alt="product")
-				h3.product__title
-					a(href='#') Гель для волос «AMERICAN CREW»
-				span.product__price 300 ₽
-				button.button.button__price(type='button') Купить
-			.product__thumb
-				a.product__link(href='#')
-					img.product__img(src=require('../../assets/images/catalog/layer-42.png'), width="220" height="165" alt="product")
-				h3.product__title
-					a(href='#') Набор для бритья «Baxter of California»
-				span.product__price 3 900 ₽
-				button.button.button__price(type='button') Купить
-				.product__paginathion--button
-					button.button.product__paginathion(type='button') 1
-					button.button.product__paginathion(type='button') 2
-					button.button.product__paginathion(type='button') 3
-					button.button.product__paginathion(type='button') 4
+		section.catalog
+			h2.visually-hidden Список средств для ухода
+			ul.catalog__list
+				li.catalog__item
+					h3
+						a(href='catalog-item.html')
+							span.catalog__description Набор для путешествий 
+							span.catalog__title «Baxter of California»
+					p.catalog__item--image
+						a(href='catalog-item.html')
+							img(src=require('../../assets/images/catalog/layer-38.png'), width="220" height="165" alt="product")
+					p.catalog__item--price
+						b 2 900 ₽
+						button.button.button__price(type='button') Купить
+				li.catalog__item
+					h3
+						a(href='catalog-item.html')
+							span.catalog__description Увлажняющий кондиционер
+							span.catalog__title «Baxter of California»
+					p.catalog__item--image
+						a(href='catalog-item.html')
+							img(src=require('../../assets/images/catalog/layer-30.png'), width="220" height="165" alt="product")
+					p.catalog__item--price
+						b 750 ₽
+						button.button.button__price(type='button') Купить
+				li.catalog__item
+					h3
+						a(href='catalog-item.html')
+							span.catalog__description Гель для волос
+							span.catalog__title «SUAVECITO»
+					p.catalog__item--image
+						a(href='catalog-item.html')
+							img(src=require('../../assets/images/catalog/layer-39.png'), width="220" height="165" alt="product")
+					p.catalog__item--price
+						b 290 ₽
+						button.button.button__price(type='button') Купить
+
+				li.catalog__item
+					h3
+						a(href='catalog-item.html')
+							span.catalog__description Глина для укладки волос
+							span.catalog__title «American crew»
+					p.catalog__item--image
+						a(href='catalog-item.html')
+							img(src=require('../../assets/images/catalog/layer-32.png'), width="220" height="165" alt="product")
+					p.catalog__item--price
+						b 500 ₽
+						button.button.button__price(type='button') Купить
+				li.catalog__item
+					h3
+						a(href='catalog-item.html')
+							span.catalog__description Гель для волос
+							span.catalog__title «AMERICAN CREW»
+					p.catalog__item--image
+						a(href='catalog-item.html')
+							img(src=require('../../assets/images/catalog/layer-33.png'), width="220" height="165" alt="product")
+					p.catalog__item--price
+						b 300 ₽
+						button.button.button__price(type='button') Купить
+				li.catalog__item
+					h3
+						a(href='catalog-item.html')
+							span.catalog__description Набор для бритья
+							span.catalog__title «Baxter of California»
+					p.catalog__item--image
+						a(href='catalog-item.html')
+							img(src=require('../../assets/images/catalog/layer-42.png'), width="220" height="165" alt="product")
+					p.catalog__item--price
+						b 3 900 ₽
+						button.button.button__price(type='button') Купить
+			ul.paginathion__list
+				li.paginathion__item
+					a.paginathion__link(href='#') 1
+				li.paginathion__item.paginathion__item--curent
+					a.paginathion__link.paghinathion__item--curent(href='#') 2
+				li.paginathion__item
+					a.paginathion__link(href='#') 3
+				li.paginathion__item
+					a.paginathion__link(href='#') 4
 	include ../modules/footer
