@@ -114,6 +114,24 @@ let conf = {
             // minify: {
             //     collapseWhitespace: true },
         }),
+        new HtmlWebpackPlugin({
+            title: 'Catalog',
+            template: './src/pug/pages/catalog-item.pug',
+            hash: true,
+            filename: 'catalog-item.html',
+            // chunks: ['contact'],
+            // minify: {
+            //     collapseWhitespace: true },
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Catalog',
+            template: './src/pug/pages/price.pug',
+            hash: true,
+            filename: 'price.html',
+            // chunks: ['contact'],
+            // minify: {
+            //     collapseWhitespace: true },
+        }),
         //
         // new HtmlWebpackPlugin({
         //     title: 'Form',
