@@ -32,12 +32,11 @@ block main
 			h2.visually-hidden Список средств для ухода
 			ul.catalog__list
 				li.catalog__item
-					h3
-						a(href='catalog-item.html')
+					a(href='catalog-item.html')
+						h3
 							span.catalog__description Набор для путешествий 
 							span.catalog__title «Baxter of California»
-					p.catalog__item--image
-						a(href='catalog-item.html')
+						p.catalog__item--image
 							img(src=require('../../assets/images/catalog/layer-38.png'), width="220" height="165" alt="product")
 					p.catalog__item--price
 						b 2 900 ₽
@@ -100,11 +99,11 @@ block main
 						button.button.button__price(type='button') Купить
 			ul.paginathion__list
 				li.paginathion__item
-					a.paginathion__link(href='#') 1
+					a.paginathion__link( type='button' href='#') 1
 				li.paginathion__item.paginathion__item--curent
-					a.paginathion__link.paghinathion__item--curent(href='#') 2
+					a.paginathion__link.paghinathion__item--curent(type='button' href='#') 2
 				li.paginathion__item
-					a.paginathion__link(href='#') 3
+					a.paginathion__link(type='button' href='#') 3
 				li.paginathion__item
-					a.paginathion__link(href='#') 4
+					a.paginathion__link(type='button' href='#') 4
 	include ../modules/footer

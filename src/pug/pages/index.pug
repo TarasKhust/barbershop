@@ -32,8 +32,8 @@ block main
 			figure.gallery__content
 				a.gallery__link( href='#')
 					img.gallery__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="gallery")
-				span.button.gallery__button.gallery__button--back Назад
-				span.button.gallery__button.gallery__button--next Вперед
+			button.button.gallery__button.gallery__button--back(type='button') Назад
+			button.button.gallery__button.gallery__button--next(type='button') Вперед
 		section.contacts
 			h2 КОНТАКТНАЯ ИНФОРМАЦИЯ
 			p.contacts__addresses БАРБЕРШОП «БОРОДИНСКИЙ»
@@ -50,19 +50,22 @@ block main
 		section.appointment
 			h2 ЗАПИСАТЬСЯ
 			p.appointment__addresses УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
-			form.contacts__enroll#contacts__form(method="post", action='/echo')
-				label(for='date') Дата
-				input#data(type='date', name='date', required='', value='', placeholder='08.10.2017')
-				label(for='time') время
-				input#time(type='time', name='time', required='', value='', placeholder='10:00')
-				label(for='name') Ваше имя
-				input#name(type='text', name='name', required='', value='', placeholder='Борода')
-				label(for='phone') Телефон
-				input#thelephone(type='tel', name='tel', required='', value='', placeholder='+7 123 456-78-90')
-				input#submit(type='submit', name='button' value='ОТПРАВИТЬ')
+			form.appointment__form#contacts__form(method="post" action='/echo')
+				p.appointment__item
+					label(for='appointment__date') Дата
+					input#appointment__date(type='text' name='date' required='' placeholder='08.10.2017')
+				p.appointment__item
+					label(for='appointment__time') время
+					input#appointment__time(type='text' name='time' required='' placeholder='10:00')
+				p.appointment__item
+					label(for='appointment__name') Ваше имя
+					input#appointment__name(type='text' name='name' required='' placeholder='Борода')
+				p.appointment__item
+					label(for='appointment__phone') Телефон
+					input#appointment__phone(type='tel' name='tel' required='' placeholder='+7 123 456-78-90')
+				input(type='submit' name='button' value='ОТПРАВИТЬ')
 	include ../modules/footer
 	include ../modules/modal__login
 	include ../modules/moda__map
-
 
 
