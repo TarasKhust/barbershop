@@ -153,10 +153,6 @@ input#user-login,
 		background-repeat no-repeat
 		background-color #f7f4f1
 		color #000000
-		ul
-			list-style none
-		a
-			color #000000
 	&__title
 		font-size 30px
 		line-height 42px
@@ -164,11 +160,51 @@ input#user-login,
 		color #aeaeae
 	&__price b
 		background-color #e5e5e5
-.breadcrumbs__item--current
-	color #aba9a7
-	line-height 24px
+.breadcrumbs__list
+	list-style none
+	li:last-child
+		color #aba9a7
+	a
+		color #000000
 .product-image__list
-	li
-		list-style none
+	list-style none
 .button__price
 	font-weight regular
+.equipment__list
+	list-style none
+.page-catalog
+	background-image url("../images/layer-10-copy.jpg")
+	background-position center
+	background-repeat no-repeat
+	background-color #f7f4f1
+	color #000000
+	li
+		list-style none
+	a
+		color #000000
+.catalog__item--price
+	b
+		background-color #e5e5e5
+.paginathion__item
+	a
+		color #ffffff
+		background-color #000000
+		&:hover,
+		&:focus,
+		&:active
+			background-color #663d15
+	&--curent
+		a
+			background-color #ffffff
+			color #000000
+.filter fieldset
+	border none
+.filter	legend
+	font-size 24px
+	line-height 30px
+.filter__input--chekbox + label
+	&:hover,
+	&:focus
+		color #663d15
+	&:disabled
+		color #000000

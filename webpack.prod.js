@@ -143,23 +143,33 @@ let conf = {
             // },
         }),
 
-        // new HtmlWebpackPlugin({
-        //     title: 'Photo',
-        //     template: './src/pug/pages/photo.pug',
-        //     hash: true,
-        //     filename: 'photo.html',
-        //     // chunks: ['contact'],
-        //     // minify: {
-        //     //     collapseWhitespace: true },
-        // }),
-        //
-        // new HtmlWebpackPlugin({
-        //     title: 'Form',
-        //     template: './src/pug/pages/form.pug',
-        //     hash: true,
-        //     // chunks: ['contact'],
-        //     filename: 'form.html',
-        // }),
+        new HtmlWebpackPlugin({
+            title: 'Catalog',
+            template: './src/pug/pages/catalog.pug',
+            hash: true,
+            filename: 'catalog.html',
+            // chunks: ['contact'],
+            // minify: {
+            //     collapseWhitespace: true },
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Catalog',
+            template: './src/pug/pages/catalog-item.pug',
+            hash: true,
+            filename: 'catalog-item.html',
+            // chunks: ['contact'],
+            // minify: {
+            //     collapseWhitespace: true },
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Catalog',
+            template: './src/pug/pages/price.pug',
+            hash: true,
+            filename: 'price.html',
+            // chunks: ['contact'],
+            // minify: {
+            //     collapseWhitespace: true },
+        }),
 
         new webpack.ProvidePlugin({
             $: 'jquery',
