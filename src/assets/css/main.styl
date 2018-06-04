@@ -1,15 +1,148 @@
 body
 	font-size baseFontSize
 	font-family basefont
+	font-weight regular
 	margin 0
 	padding 0
-	outline 0
-	border 0
-	vertical-align: baseline;
+	vertical-align: baseline
+	color #f7f4f1
+	line-height 24px
+	text-transform: uppercase;
+	background-image url("../images/background.jpg")
+	background-color black
+	background-repeat no-repeat
+	background-position top center
+
 a
 	text-decoration none
-li
-	list-style none
 h1 h2
   &.visually-hidden
-	  hidden()
+	hidden()
+h2
+	color #000000
+	font-size 30px
+	line-height 42px
+.button
+	font inherit
+	vertical-align middle
+	color #ffffff
+	text-align center
+	text-transform uppercase
+	background-color #000000
+	border none
+	&:hover,
+	&:focus,
+	&:active
+		background-color #663d15
+.main-nav
+	color #ffffff
+	font-size 16px
+	line-height 20px
+	background-color black
+	a
+		color #ffffff
+		&:hover,
+		&:focus,
+		&:active
+			background-color  #242424
+	ul
+		list-style none
+.offers__list
+	list-style none
+	h3
+		color #f7f4f1
+		font-size 30px
+		line-height 42px
+.news
+	&__wrapper
+		background-image url("../images/layer-10-copy.jpg")
+		background-position center
+		background-repeat no-repeat
+		background-color #f7f4f1
+		color #000000
+	&__date
+		text-transform none
+.gallery__content
+	border 7px solid white
+	background-color: #cccccc;
+.contacts
+	&__wrapper
+		background-image url("../images/layer-10-copy.jpg")
+		background-position center
+		background-repeat no-repeat
+		background-color #f7f4f1
+		color #000000
+	&__phone
+		text-decoration none
+		color: #000000
+.appointment__item input
+	border 2px solid #000101
+	font inherit
+	&:focus
+		border-color #663d15
+footer
+	background-image url("../images/layer-23.jpg")
+	background-position 0 0
+	background-repeat repeat
+	background-color #242424
+	color #ffffff
+.footer
+	color white
+	&__find
+		text-decoration underline
+		color #ffffff
+		&:hover
+			text-decoration none
+	&__phone
+		text-decoration none
+		color #ffffff
+	&__social
+		text-align center
+		ul
+			list-style none
+		a
+			color  #ffffff
+	&__copyright
+		text-align center
+	&__link
+		a
+		&:hover,
+		&:focus
+			background-color #ffffff
+			color #000000
+
+	&__button
+		&:hover,
+		&:focus
+			color #000000
+			background-color  #ffffff
+.modal.modal__login
+	background-image url("../images/layer-10-copy.jpg")
+	background-position 0 0
+	background-repeat repeat
+	background-color #242424
+	color #000000
+	h2
+		color #000000
+		font-size 30px
+input#user-login,
+#user-password
+	font inherit
+	color #000000
+	text-transform uppercase
+	background-color #f9f6f3
+	border 2px solid #000000
+	&:focus
+		border-color #663d15
+.forget
+	text-decoration underline
+	color #000000
+	&:hover,
+	&:focus
+		text-decoration none
+.login__checkbox
+	&:hover,
+	&:focus
+		color #663d15
+
+

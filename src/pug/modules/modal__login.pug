@@ -9,9 +9,10 @@ section.modal.modal__login
 			label.visually-hidden(for='user-password')
 			input.login-icon-password#user-password(type='password' name='password' required='' placeholder='ПАРОЛЬ' src=require('../../assets/images/icons/lock.png'))
 		p.login-password__item
-			input#remember(type='checkbox' name='remember' checked='')
-			| ЗАПОМНИТЕ МЕНЯ
+			label(for='remember')
+				input#remember(type='checkbox' name='remember' checked='')
+				| ЗАПОМНИТЕ МЕНЯ
 			a.forget(href='#') Я ЗАБЫЛ ПАРОЛЬ!
-		input(type='submit' value='ВОЙТИ')
+		input.button(type='submit' value='ВОЙТИ')
 		button.modal__close(type='button') Закрыть
 
