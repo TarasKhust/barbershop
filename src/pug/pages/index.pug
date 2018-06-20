@@ -32,22 +32,23 @@ block main
 				h2 Фотогалерея
 				figure.gallery__content
 					a.gallery__link( href='#')
-						img.gallery__img(src=require('../../assets/images/layer-21.jpg'), width="286" alt="gallery")
-				button.button.gallery__button.gallery__button--back(type='button') Назад
-				button.button.gallery__button.gallery__button--next(type='button') Вперед
+						img.gallery__img(src=require('../../assets/images/layer-21.jpg'), width="286" height="164" alt="gallery")
+				.gallery_container
+					button.button.gallery__button.gallery__button--back(type='button') Назад
+					button.button.gallery__button.gallery__button--next(type='button') Вперед
 		.contacts__wrapper
 			section.contacts
-			h2 КОНТАКТНАЯ ИНФОРМАЦИЯ
-			p.contacts__addresses БАРБЕРШОП «БОРОДИНСКИЙ»
-			br
-			| АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8
-			a.contacts__phone(href="tel:+74956660266") ТЕЛЕФОН: +7 (495) 666-02-66
-			p.contacts__time ВРЕМЯ РАБОТЫ:
-			| ПН—ПТ: С 10:00 ДО 22:00
-			br
-			| СБ—ВС: С 10:00 ДО 19:00
-			a.button.contacts__button(href='#' type='button') КАК ПРОЕХАТЬ
-			a.button.contacts__button(href='#' type='button') ОБРАТНАЯ СВЯЗЬ
+				h2 КОНТАКТНАЯ ИНФОРМАЦИЯ
+				p.contacts__addresses БАРБЕРШОП «БОРОДИНСКИЙ»
+				span АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8
+				a.contacts__phone(href="tel:+74956660266") ТЕЛЕФОН: +7 (495) 666-02-66
+				p.contacts__time ВРЕМЯ РАБОТЫ:
+				| ПН—ПТ: С 10:00 ДО 22:00
+				br
+				span СБ—ВС: С 10:00 ДО 19:00
+				.contacts__container
+					a.button.contacts__button(href='#' type='button') КАК ПРОЕХАТЬ
+					a.button.contacts__button(href='#' type='button') ОБРАТНАЯ СВЯЗЬ
 			section.appointment
 				h2 ЗАПИСАТЬСЯ
 				p.appointment__addresses УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
