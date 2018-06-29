@@ -22,6 +22,9 @@ h2
 	color #000000
 	font-size 30px
 	line-height 42px
+img
+	max-width 100%
+	height auto
 .button
 	font inherit
 	vertical-align middle
@@ -41,8 +44,10 @@ h2
 	color #ffffff
 	font-size 16px
 	line-height 20px
-	a
+	li a
+		display block
 		color #ffffff
+		padding 25px 20px
 		&:hover,
 		&:focus,
 		&:active
@@ -52,9 +57,21 @@ h2
 .offers__list
 	list-style none
 	h3
+		position relative
 		color #f7f4f1
 		font-size 30px
 		line-height 42px
+		margin-bottom 60px
+		&:after
+			content ""
+			width 20px
+			height 20px
+			background-color #f7f4f1
+			position absolute
+			transform rotate(45deg)
+			 margin-left -10px
+			bottom -30px
+			left 50%
 .news
 	&__wrapper
 		background-image url("../images/layer-10-copy.jpg")
@@ -219,7 +236,6 @@ input#user-login,
 	background-color black
 	display flex
 	justify-content space-between
-	padding 29px 0 29px 0
 	margin-bottom 60px
 .main-nav
 	display flex
@@ -242,14 +258,30 @@ input#user-login,
 	margin 0
 	padding 0
 	display flex
+	flex-wrap wrap
 .main-nav__entrance
-	width 140px
-	padding 0 20px 0 0
+	max-width 140px
 	margin 0
 	display flex
-	justify-content flex-end
-.main-nav__item
-	margin-right 40px
+	justify-content space-between
+	padding 0
+	position relative
+.main-nav__entrance .login__link
+	padding-left 50px
+.login__link::before
+	content ""
+	background url("../images/icons/login.png") no-repeat 50% 50%
+	position absolute
+	top 27px
+	left 23px
+	width 16px
+	height 18px
+	opacity 0.3
+.login__link:hover::before,
+.login__link:focus::before,
+.login__link:active::before
+	opacity 1
+
 .page
 	width 940px
 	margin 0 auto
@@ -406,3 +438,4 @@ figure.product
 	display flex
 	flex-direction row
 	padding 0
+
