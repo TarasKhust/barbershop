@@ -40,6 +40,10 @@ img
 	&:focus,
 	&:active
 		background-color #663d15
+	&:disabled
+		color #ffffff
+		opacity 0.3
+
 .main-nav
 	color #ffffff
 	font-size 16px
@@ -74,7 +78,7 @@ img
 			left 50%
 .news
 	&__wrapper
-		background-image url("../images/layer-10-copy.jpg")
+		background-image url("../images/icons/layer-17-copy.png"), url("../images/layer-10-copy.jpg")
 		background-position center
 		background-repeat no-repeat
 		background-color #f7f4f1
@@ -85,7 +89,7 @@ img
 	border 7px solid white
 .contacts
 	&__wrapper
-		background-image url("../images/layer-10-copy.jpg")
+		background-image url("../images/icons/layer-17-copy.png"), url("../images/layer-10-copy.jpg")
 		background-position center
 		background-repeat no-repeat
 		background-color #f7f4f1
@@ -120,6 +124,12 @@ img
 		text-align center
 		ul
 			list-style none
+			margin 0 auto
+			padding 0
+			display flex
+			width 141px
+			flex-wrap wrap
+			justify-content space-between
 		a
 			color  #ffffff
 	&__copyright
@@ -129,13 +139,17 @@ img
 		&:hover,
 		&:focus
 			background-color #ffffff
-			color #000000
+			path
+				fill #000000
 
 	&__button
 		&:hover,
 		&:focus
 			color #000000
 			background-color  #ffffff
+	&__title
+		margin-bottom 20px
+		display inline-block
 .modal.modal__login
 	background-image url("../images/layer-10-copy.jpg")
 	background-position 0 0
@@ -355,7 +369,7 @@ input#user-login,
 .contacts
 	width 325px
 .appointment
-	width 290px
+	width 300px
 .contacts__time,
 .contacts__addresses
 	margin-bottom 0
@@ -438,4 +452,42 @@ figure.product
 	display flex
 	flex-direction row
 	padding 0
+.appointment__item
+	margin 0
+	margin-bottom 10px
+	width 140px
+	label
+		display block
+		margin 0 0 3px 17px
+	input
+		padding 8px 15px 7px 15px
+		width 140px
+		font inherit
+		border 2px solid #000101
+		background-color #f9f6f3
+		box-sizing border-box
+.appointment__form input[type='text']:focus, input[type='tel']:focus
+	border 2px solid #663d15
+.appointment p
+	margin 0
+	margin-bottom 15px
+.appointment h2
+	margin 0
+	margin-bottom 13px
+.appointment__form
+	display flex
+	flex-wrap wrap
+	justify-content space-between
+.appointment__form input[class='button']
+	width 100%
+	margin 0
+	margin-top 4px
+	padding 0
+.footer__link
+	display flex
+	align-items center
+	justify-content center
+	width 43px
+	height 43px
+	background-color #000000
 
