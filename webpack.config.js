@@ -24,7 +24,10 @@ let conf = {
         extensions: ['.js', '.css', '.scss']
     },
     devServer: {
-        overlay: true,
+        overlay: {
+            warning: true,
+            errors: true
+        }
         // contentBase: 'dist'
     },
     module: {
@@ -79,6 +82,10 @@ let conf = {
                     // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
                     'image-webpack-loader'
                 ]
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             },
             {
                 test: /\.(svg)$/,

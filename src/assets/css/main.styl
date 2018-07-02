@@ -13,7 +13,6 @@ body
 	background-repeat no-repeat
 	background-position top center
 	min-width 960px
-
 a
 	text-decoration none
 h1 h2
@@ -49,10 +48,10 @@ img
 	color #ffffff
 	font-size 16px
 	line-height 20px
-	li a
+	a
 		display block
 		color #ffffff
-		padding 25px 20px
+		padding 25px 25px 25px 20px
 		&:hover,
 		&:focus,
 		&:active
@@ -157,6 +156,9 @@ img
 	background-repeat repeat
 	background-color #242424
 	color #000000
+	top 118px
+	position absolute
+	left 36.6%
 	h2
 		color #000000
 		font-size 30px
@@ -407,6 +409,7 @@ input#user-login,
 .modal-container
 	padding 43px 80px
 	margin 0
+	width 300px
 	h2
 		margin 0
 .button-exit
@@ -491,4 +494,30 @@ figure.product
 	width 43px
 	height 43px
 	background-color #000000
+.modal__login__item input
+	width: 300px;
+	border: 2px solid #000101;
+	background-color: #f9f6f3;
+	padding 8px 0 8px 16px
+	box-sizing border-box
+	&::placeholder
+		color black
+.forget
+	display inline-block
+	float right
+	vertical-align middle
+	text-decoration underline
+	text-transform uppercase
+.login-password__item::before
+	content ''
+	width 18px
+	height 18px
+	border 2px solid #000101
+	background-color #f9f6f3
+	position absolute
+	background url("../images/icons/cross.png") no-repeat 50% 50%
+	display block
+.login__form input[name='remember']:checked
+	visibility hidden
+
 

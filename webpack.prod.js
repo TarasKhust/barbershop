@@ -89,6 +89,10 @@ let conf = {
                 ]
             },
             {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
+            },
+            {
                 test: /\.(svg)$/,
                 use: 'file-loader?name=images/icons/[name].[ext]'
             },
