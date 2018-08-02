@@ -43,7 +43,6 @@ img
 	&:disabled
 		color #ffffff
 		opacity 0.3
-
 .main-nav
 	color #ffffff
 	font-size 16px
@@ -157,18 +156,20 @@ img
 	background-color #242424
 	color #000000
 	top 118px
-	position absolute
-	left 36.6%
+	position fixed
+	box-shadow 0 30px 50px rgba(0, 0, 0, 0.7)
+	left 34%
 	h2
 		color #000000
 		font-size 30px
-input#user-login,
-#user-password
+.login__form input[type='text'],
+.login__form input[type='password']
 	font inherit
 	color #000000
 	text-transform uppercase
 	background-color #f9f6f3
 	border 2px solid #000000
+	padding-right 40px
 	&:focus
 		border-color #663d15
 .forget
@@ -406,8 +407,9 @@ input#user-login,
 	height auto
 .modal
 	width 460px
+	display none
 .modal-container
-	padding 43px 80px
+	padding 43px 80px 53px
 	margin 0
 	width 300px
 	h2
@@ -503,21 +505,128 @@ figure.product
 	&::placeholder
 		color black
 .forget
-	display inline-block
-	float right
+	display inline-flex
 	vertical-align middle
 	text-decoration underline
 	text-transform uppercase
-.login-password__item::before
-	content ''
-	width 18px
-	height 18px
-	border 2px solid #000101
-	background-color #f9f6f3
+.login__form label [type='checkbox']
 	position absolute
-	background url("../images/icons/cross.png") no-repeat 50% 50%
+	top 0
+	left 0
+	height 0
+	width 0
+.login__form label:nth-child(1)
+	position relative
+	padding-left 30px
+	cursor pointer
+.login-password__item
+	display: flex;
+	justify-content: space-between;
+.login__form label [type='checkbox']:before
+	content ''
+	width 20px
+	height 20px
+	border 2px solid #000101
+	position absolute
+	display inline
+	box-sizing border-box
+.login__form label [type='checkbox']:checked:before
+	content ''
+	width 20px
+	height 20px
+	border 2px solid #000101
+	position absolute
+	background #f9f6f3 url("../images/icons/cross.png") no-repeat 50% 50%
+	display inline
+	box-sizing border-box
+.modal__close
+	position absolute
+	top 0
+	right -34px
+	width 22px
+	height 22px
+	font-size 0
+	border 0
+	cursor pointer
+	background-color transparent
+	&:before
+		transform rotate(45deg)
+		content ""
+		position absolute
+		width 19px
+		height 3px
+		background-color #d0d0d0
+		top 10px
+		left 2px
+	&:after
+		content ""
+		position absolute
+		transform rotate(-45deg)
+		width 19px
+		height 3px
+		background-color #d0d0d0
+		top 10px
+		left 2px
+.modal__map
+	position fixed
+	width 768px
+	height 561px
+	margin-top -1635px
+	margin-left 235px
+	border 7px solid white
+	p
+		margin 0
+.modal-show
 	display block
-.login__form input[name='remember']:checked
-	visibility hidden
+	animation-name bounce
+	animation-duration 0.6s
+
+.modal-error
+	animation-name shake
+	aimation-duration 0.6s
+
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
 
 
+@keyframes vibrate {
+	50% {
+		transform: rotate(360deg) scale(1.2);
+	}
+}
+
+@keyframes bounce {
+	0% { transform: translateY(-2000px);}
+	70% { transform: translateY(30px);}
+	90% { transform: translateY(-10px);}
+	100% { transform: translateY(0);}
+
+}
+
+@keyframes power {
+	0% {
+		color: #01ff70;
+	}
+	50% {
+		bcolor: #ffdc00;
+	}
+	100% {
+		color: #ff4136;
+	}
+}
+.main-nav__item a {
+	animation-name: power;
+	animation-duration: 2s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+}
+.main-nav__item a {
+	animation-name: vibrate, power, bounce;
+	animation-fill-mode: backwards;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-delay: 2s;
+}
