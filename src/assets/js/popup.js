@@ -6,7 +6,16 @@ let close = document.querySelector('.modal__close');
 let login = popup.querySelector('[name=login]');
 let form = popup.querySelector('form');
 let password = popup.querySelector('[name=password]');
-let storage = localStorage.getItem('login');
+
+let isStorageSupport;
+let storage = "";
+
+try {
+    storage = localStorage.getItem('login');
+}
+    catch (err) {
+        isStorageSupport = false;
+}
 
 link.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -42,12 +51,16 @@ form.addEventListener('submit', function (evt) {
         popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("modal-error");
     } else {
-        localStorage.setItem('login', login.value);
+        if (isStorageSupport) {
+            localStorage.setItem('login', login.value);
+        }
     }
 });
 
 window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
+        evt.preventDefault();
+
         if (popup.classList.contains("modal-show") || popupMap.classList.contains("modal-show")) {
             popup.classList.remove("modal-show");
             popup.classList.remove('modal-error');

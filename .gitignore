@@ -2,4 +2,3 @@
 .stylelintrc
 .idea
 /node_modules
-/dist/

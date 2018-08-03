@@ -9,7 +9,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 let webpack = require('webpack');
 
 let SRC_DIR = path.resolve(__dirname,'src');
-let DIST_DIR = path.resolve(__dirname, 'dist');
+let DIST_DIR = path.resolve(__dirname, './');
 let ASSET_PATH = process.env.ASSET_PATH || '';
 
 let conf = {
