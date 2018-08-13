@@ -7,6 +7,9 @@ let glob = require('glob-all');
 let PurifyCSSPlugin = require('purifycss-webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let webpack = require('webpack');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
+let UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+let ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 let SRC_DIR = path.resolve(__dirname,'src');
 let DIST_DIR = path.resolve(__dirname, './');
@@ -83,7 +86,7 @@ let conf = {
             {
                 test: /\.(jpg|png|gif|jpeg)$/,
                 use: [
-                    'file-loader?name=images/[name].[ext]',
+                    'file-loader?name=[path][name].[ext]',
                     // 'file-loader?name=[name].[ext]&outputPath=../images/&publicPath=.images/',
                     'image-webpack-loader'
                 ]
@@ -91,6 +94,10 @@ let conf = {
             {
                 test: /\.svg$/,
                 loader: 'svg-inline-loader'
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-url-loader'
             },
             {
                 test: /\.(svg)$/,
@@ -127,7 +134,7 @@ let conf = {
             //     ],
             // },
             {
-                test: /\.(woff2?|ttf|eot|otf)$/,
+                test: /\.(woff|woff2?|ttf|eot|otf)$/,
                 use: 'file-loader?name=fonts/[name].[ext]'
             },
         ]
@@ -174,10 +181,29 @@ let conf = {
             // minify: {
             //     collapseWhitespace: true },
         }),
+        new CopyWebpackPlugin(
+            [
+                { from: 'src/assets/images', to: 'images' }
+            ],
+            {
+                ignore: [
+                    {glob: 'svg/*'},
+                ]
+            }
+        ),
+        new UglifyJSPlugin ({
+           sourceMap: true
+        }),
+
+        new ImageminPlugin ({
+            test: /\.(png|gif|jpe?g|svg)$/i
+        }),
 
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            jquery: 'jquery',
+            popper: ['popper.js','default']
         }),
 
         new ExtractTextPlugin({
